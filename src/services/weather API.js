@@ -4,8 +4,8 @@ const BASE_URL = "https://api.openweathermap.org/data/2.5"
 
 export const getWeatherData = async (dataType, searchParams)=>{
     const url = new URL(BASE_URL+"/"+dataType);
-    url.search =new URLSearchParams({...searchParams,appid:API_KEY})
     console.log(url);
+    url.search =new URLSearchParams({...searchParams,appid:API_KEY})
   const res = await fetch(url);
   const data =await res.json();
   return data;
