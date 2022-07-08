@@ -64,5 +64,6 @@ const formatForecast = (data) => {
 }
 
 const formatLocalTime = (secs, zone, format = "ccc, dd LLL yyyy' | Local time: 'hh:mm a") => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+const iconUrlCode =(code)=>`http://openweathermap.org/img/wn/${code}@2x.png`;
 
-export { getFormattedWeatherData };
+export { getFormattedWeatherData,iconUrlCode,formatLocalTime };
